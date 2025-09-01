@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 # Get OS type using uname since $OSTYPE is bash-specific
-os_type=$(uname -s 2>/dev/null || echo "unknown")
+os_type=$(uname -s)
 
 case "$os_type" in
-    Darwin*)
+    Darwin)
         # macOS
         if command -v brew >/dev/null 2>&1; then
             brew install yadm
@@ -13,7 +13,7 @@ case "$os_type" in
             exit 1
         fi
         ;;
-    Linux*)
+    Linux)
         # Linux
         if command -v apt >/dev/null 2>&1; then
             sudo apt update && sudo apt install -y yadm
@@ -23,8 +23,7 @@ case "$os_type" in
         fi
         ;;
     *)
-        echo "Unsupported operating system: '$os_type'"
-        echo "Detected via uname -s: $(uname -s 2>/dev/null || echo 'command failed')"
+        echo "Unsupported operating system: $os_type"
         exit 1
         ;;
 esac
