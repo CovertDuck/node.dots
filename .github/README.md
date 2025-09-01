@@ -1,6 +1,6 @@
 # node.dots
 
-*Modern Age. Modern `dotfiles`.
+*Modern Age. Modern `dotfiles`.*
 
 ## Install
 
