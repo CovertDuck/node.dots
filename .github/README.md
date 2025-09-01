@@ -6,8 +6,8 @@
 
 ```sh
 # Using curl
-curl -fsSL https://raw.githubusercontent.com/CovertDuck/node.dots/main/init.sh | sh
+curl -fsSL https://raw.githubusercontent.com/CovertDuck/node.dots/master/init.sh | sh
 
 # Using wget
-wget -qO- https://raw.githubusercontent.com/CovertDuck/node.dots/main/init.sh | sh
+wget -qO- https://raw.githubusercontent.com/CovertDuck/node.dots/master/init.sh | sh
 ```
