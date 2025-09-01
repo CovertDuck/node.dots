@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+brew install zsh --quiet
+chsh $(which zsh)
