@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+SCRIPTS_PATH=${SCRIPTS_PATH:=~/.config/yadm/scripts}
+
+$SCRIPTS_PATH/install_zsh
+$SCRIPTS_PATH/install_docker
