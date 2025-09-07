@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 
+echo "Installing ZSH..."
 brew install zsh --quiet
-chsh $(which zsh)
+chsh -s $(which zsh)
