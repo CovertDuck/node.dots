@@ -5,3 +5,4 @@ chmod +x ${SCRIPTS_PATH}/*
 
 $SCRIPTS_PATH/install_zsh
 $SCRIPTS_PATH/install_docker
+$SCRIPTS_PATH/install_tailscale

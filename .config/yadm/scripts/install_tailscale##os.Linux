@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+# Update and install dependencies
+sudo apt-get update -y
+sudo apt-get install -y curl
+
+# Install Tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
+# Prompt the user for an auth key
+read -p "Please enter your Tailscale auth key: " AUTH_KEY
+
+# Start Tailscale service with the provided auth key
+sudo tailscale up --authkey $AUTH_KEY --hostname $(hostname)
+
+# Check if Tailscale started successfully
+if [ $? -eq 0 ]; then
+    echo "Tailscale started successfully. Your server is now connected to the network."
+else
+    echo "There was an issue starting Tailscale. Please ensure your auth key is correct."
+fi
+
+# Provide instructions for manual authentication if needed
+echo "If you didn't provide an auth key, please visit the Tailscale admin panel to authenticate this server manually."
+echo "Visit: https://login.tailscale.com/admin/machines"
